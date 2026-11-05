@@ -154,3 +154,11 @@ The autonomous contribution engine executes distributed maintenance cycles using
 1. **POSIX Shell Core:** Native `bash` scripts with zero third-party runtimes.
 2. **Safety Jails:** Diff inspection before commit stages to eliminate secret exposure.
 3. **Atomic Verification:** Amends self-recorded audit ledgers to maintain git hygiene.
+
+## Frequently Asked Questions (FAQ)
+
+### How does the engine adhere to the zero-fabrication rule?
+The engine only commits verified structural, documentation, or code improvements (governance files, code style, gitignore hardening, automated tests, posix compliance). When all checks pass, it reports 0 commits and exits cleanly without creating artificial activity.
+
+### How are secrets prevented from being committed?
+A pre-commit staged diff scanner inspects every staged file before committing. If high-entropy tokens, private keys, or API credentials match the inspection regex, the staging is aborted immediately.
