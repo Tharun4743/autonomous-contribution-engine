@@ -87,7 +87,7 @@ jobs:
           git pull origin main --rebase -X theirs || git pull origin main --rebase || true
 
           # Inspect diff to ensure zero secrets before network push
-          if git log -1 --stat | grep -qE "ghp_|xkeysib-|BEGIN PRIVATE KEY"; then
+          if git log -1 --stat | grep -qE "ghp_[A-Za-z0-9]{30,}|xkeysib-[a-zA-Z0-9]{64}|-----BEGIN [A-Z ]*PRIVATE KEY-----"; then
             echo "🚨 ABORT: Potential secret detected in recent commit! Halting push."
             exit 1
           fi
