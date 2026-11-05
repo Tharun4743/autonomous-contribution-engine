@@ -85,7 +85,7 @@ jobs:
         run: |
           echo "📦 Verifying local commits against remote..."
           git pull origin main --rebase -X theirs || git pull origin main --rebase || true
-          
+
           # Inspect diff to ensure zero secrets before network push
           if git log -1 --stat | grep -qE "ghp_|xkeysib-|BEGIN PRIVATE KEY"; then
             echo "🚨 ABORT: Potential secret detected in recent commit! Halting push."
