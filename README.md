@@ -147,3 +147,10 @@ bash scripts/maintenance.sh
 export DRY_RUN="false"
 bash scripts/maintenance.sh
 ```
+
+## Architecture & Workflow
+
+The autonomous contribution engine executes distributed maintenance cycles using:
+1. **POSIX Shell Core:** Native `bash` scripts with zero third-party runtimes.
+2. **Safety Jails:** Diff inspection before commit stages to eliminate secret exposure.
+3. **Atomic Verification:** Amends self-recorded audit ledgers to maintain git hygiene.
