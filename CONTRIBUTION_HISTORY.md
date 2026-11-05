@@ -18,3 +18,4 @@ Every entry corresponds to a genuine, validated commit meeting zero-fabrication 
 | 2026-11-05 16:48:23 UTC | `CODE_OF_CONDUCT.md` | Governance | `e649c4d` | ✅ PASSED | Established community standards and conduct guidelines. |
 | 2026-11-05 16:48:23 UTC | `.gitattributes` | Configuration | `6bdd10b` | ✅ PASSED | Configured LF enforcement for shell and configuration assets. |
 | 2026-11-05 16:48:23 UTC | `.shellcheckrc` | Configuration | `3371713` | ✅ PASSED | Defined shell script linting standards. |
+| 2026-11-05 16:48:24 UTC | `.github/pull_request_template.md` | Governance | `a5cb254` | ✅ PASSED | Created structured PR checklist template. |
