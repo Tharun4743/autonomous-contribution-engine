@@ -1,0 +1,4 @@
+# ShellCheck static analysis configuration
+disable=SC1090,SC1091
+enable=all
+shell=bash
